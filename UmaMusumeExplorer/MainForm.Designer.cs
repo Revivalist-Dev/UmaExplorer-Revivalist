@@ -45,6 +45,8 @@ namespace UmaMusumeExplorer
             supportCardInfoControl = new UmaMusumeExplorer.Controls.SupportCardInfo.SupportCardInfoControl();
             raceMusicTabPage = new TabPage();
             raceMusicPlayerControl = new UmaMusumeExplorer.Controls.RaceMusicPlayer.RaceMusicPlayerControl();
+            storyEventViewerTabPage = new TabPage();
+            storyEventViewerControl = new Controls.StoryEventViewer.StoryEventViewerControl();
             tabControl.SuspendLayout();
             fileBrowserTabPage.SuspendLayout();
             audioPlayerTabPage.SuspendLayout();
@@ -53,6 +55,7 @@ namespace UmaMusumeExplorer
             characterInfoTabPage.SuspendLayout();
             supportCardsTabPage.SuspendLayout();
             raceMusicTabPage.SuspendLayout();
+            storyEventViewerTabPage.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl
@@ -65,6 +68,7 @@ namespace UmaMusumeExplorer
             tabControl.Controls.Add(characterInfoTabPage);
             tabControl.Controls.Add(supportCardsTabPage);
             tabControl.Controls.Add(raceMusicTabPage);
+            tabControl.Controls.Add(storyEventViewerTabPage);
             tabControl.Name = "tabControl";
             tabControl.SelectedIndex = 0;
             // 
@@ -151,9 +155,22 @@ namespace UmaMusumeExplorer
             // 
             resources.ApplyResources(raceMusicPlayerControl, "raceMusicPlayerControl");
             raceMusicPlayerControl.Name = "raceMusicPlayerControl";
-            // 
+            //
+            // storyEventViewerTabPage
+            //
+            storyEventViewerTabPage.Controls.Add(storyEventViewerControl);
+            resources.ApplyResources(storyEventViewerTabPage, "storyEventViewerTabPage");
+            storyEventViewerTabPage.Name = "storyEventViewerTabPage";
+            storyEventViewerTabPage.Text = "Story Event Viewer";
+            storyEventViewerTabPage.UseVisualStyleBackColor = true;
+            //
+            // storyEventViewerControl
+            //
+            resources.ApplyResources(storyEventViewerControl, "storyEventViewerControl");
+            storyEventViewerControl.Name = "storyEventViewerControl";
+            //
             // MainForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Dpi;
             Controls.Add(tabControl);
@@ -167,6 +184,7 @@ namespace UmaMusumeExplorer
             characterInfoTabPage.ResumeLayout(false);
             supportCardsTabPage.ResumeLayout(false);
             raceMusicTabPage.ResumeLayout(false);
+            storyEventViewerTabPage.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -186,6 +204,8 @@ namespace UmaMusumeExplorer
         private Controls.Jukebox.JukeboxControl jukeboxControl;
         private TabPage supportCardsTabPage;
         private Controls.SupportCardInfo.SupportCardInfoControl supportCardInfoControl;
+        private TabPage storyEventViewerTabPage;
+        private Controls.StoryEventViewer.StoryEventViewerControl storyEventViewerControl;
     }
 }
 
